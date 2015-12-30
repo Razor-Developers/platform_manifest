@@ -548,6 +548,4 @@
   <project path="external/ffmpeg" name="SlimRoms/android_external_ffmpeg" remote="github" revision="mm6.0" />
   <project path="external/stagefright-plugins" name="SlimRoms/android_external_stagefright-plugins" remote="github" revision="mm6.0" />
 
-  <!-- OTA -->
-  <project path="packages/apps/OTACenter" name="packages_apps_OTACenter" remote="tr" revision="mm-6.0" />
 </manifest>
