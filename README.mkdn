@@ -24,7 +24,7 @@ To initialize your local repository using the Razor trees, use this command:
 ----------------------------------------------------------------------------
 
         
-        repo init -u git://github.com/Razor-Developers/platform_manifest.git -b mm-6.0
+        repo init -u git://github.com/Razor-Developers/platform_manifest.git -b mm6.0
         
 
 Then sync up with this command:
