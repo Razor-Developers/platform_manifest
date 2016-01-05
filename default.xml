@@ -13,14 +13,15 @@
   <remote name="cm"
            fetch="https://github.com/CyanogenMod/" />
 
-  <remote name="tr"
-           fetch="git://github.com/Razor-Developers/" />
+  <remote name="razor"
+           fetch="https://github.com/Razor-Developers/"
+           revision="mm6.0" />
 
   <default revision="refs/tags/android-6.0.0_r7"
            remote="aosp"
            sync-j="4" />
 
-  <project path="build" name="android_build" remote="tr" revision="mm-6.0" >
+  <project path="build" name="android_build" remote="razor" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
@@ -272,7 +273,7 @@
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/av" name="SlimRoms/frameworks_av" remote="github" revision="mm6.0" />
-  <project path="frameworks/base" name="frameworks_base" remote="tr" revision="mm-6.0" />
+  <project path="frameworks/base" name="frameworks_base" remote="razor" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
@@ -422,7 +423,7 @@
   <project path="packages/apps/PhoneCommon" name="SlimRoms/packages_apps_PhoneCommon" remote="github" revision="mm6.0" />
   <project path="packages/apps/Protips" name="platform/packages/apps/Protips" />
   <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="tr" revision="mm-6.0" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="razor" />
   <project path="packages/apps/SmartCardService" name="platform/packages/apps/SmartCardService" groups="pdk-fs" />
   <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" groups="pdk-fs" />
   <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" groups="pdk-fs" />
@@ -500,7 +501,7 @@
   <project path="system/extras/su" name="SlimRoms/android_system_extras_su" remote="github" revision="mm6.0" />
   <project path="system/gatekeeper" name="platform/system/gatekeeper" groups="pdk" />
   <project path="system/keymaster" name="SlimRoms/android_system_keymaster" remote="github" revision="mm6.0" />
-  <project path="system/media" name="SlimRoms/android_system_media" remote="github" revision="mm6.0" />
+  <project path="system/media" name="system_media" remote="razor" />
   <project path="system/netd" name="SlimRoms/android_system_netd" remote="github" revision="mm6.0" />
   <project path="system/qcom" name="SlimRoms/android_system_qcom" remote="github" revision="mm6.0" />
   <project path="system/security" name="SlimRoms/android_system_security" remote="github" revision="mm6.0" />
@@ -520,11 +521,14 @@
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
   <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="notdefault,tradefed" />
 
-  <project path="platform_manifest" name="platform_manifest" remote="tr" revision="mm-6.0" />
+  <project path="platform_manifest" name="platform_manifest" remote="razor" />
 
   <!-- New Additions for Razor-ROM -->
-  <project path="vendor/razor" name="vendor_razor" remote="tr" revision="mm-6.0" />
-
+  <project path="vendor/razor" name="vendor_razor" remote="razor" />
+  <project path="packages/apps/Eleven" name="packages_apps_Eleven" remote="razor" />
+  <project path="packages/apps/Apollo" name="packages_apps_Apollo" remote="razor" />
+  <project path="packages/apps/OmniSwitch" name=" packages_apps_OmniSwitch" remote="razor" />
+  
   <!-- CAF repos -->
   <project path="vendor/qcom/opensource/display-frameworks" name="SlimRoms/vendor_qcom_opensource_display-frameworks" remote="github" revision="mm6.0" />
   <project path="vendor/qcom/opensource/dpm" name="SlimRoms/vendor_qcom_opensource_dpm" remote="github" revision="mm6.0" />
