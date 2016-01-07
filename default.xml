@@ -7,6 +7,16 @@
            fetch="git://github.com/"
            review="https://review.slimroms.org/"/>
 
+  <remote name="bit"
+           fetch="https://bitbucket.org/" />
+
+  <remote name="cm"
+           fetch="https://github.com/CyanogenMod/" />
+
+  <remote name="razor"
+           fetch="https://github.com/Razor-Developers/"
+           revision="mm-6.0" />
+           
   <remote  name="aospb"
            fetch="https://github.com/AOSPB"
            revision="mm6.0" />
@@ -15,7 +25,7 @@
            remote="aosp"
            sync-j="4" />
 
-  <project path="build" name="build" remote="aospb" >
+  <project path="build" name="android_build" remote="razor" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
@@ -267,7 +277,7 @@
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/av" name="frameworks_av" remote="aospb" />
-  <project path="frameworks/base" name="frameworks_base" remote="aospb" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="razor" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
@@ -398,7 +408,7 @@
   <project path="packages/apps/PhoneCommon" name="packages_apps_PhoneCommon" remote="aospb" />
   <project path="packages/apps/Protips" name="platform/packages/apps/Protips" />
   <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="aospb" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="razor" />
   <project path="packages/apps/SmartCardService" name="platform/packages/apps/SmartCardService" groups="pdk-fs" />
   <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" groups="pdk-fs" />
   <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" groups="pdk-fs" />
@@ -495,10 +505,10 @@
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
   <project path="tools/tradefederation" name="platform/tools/tradefederation" groups="notdefault,tradefed" />
 
-  <project path="manifest" name="manifest" remote="aospb" />
+  <project path="manifest" name="platform_manifest" remote="razor" />
 
-  <!-- New Additions for slim -->
-  <project path="vendor/aospb" name="vendor_aospb" remote="aospb" />
+  <!-- New Additions for razor -->
+  <project path="vendor/razor" name="android_vendor_razor" remote="razor" />
 
   <!-- CAF repos -->
   <project path="vendor/qcom/opensource/display-frameworks" name="vendor_qcom_opensource_display-frameworks" remote="aospb" />
